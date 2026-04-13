@@ -17,3 +17,4 @@ while True:
     print(f"{ram.percent}% {bar}")
 
     print(cpu)
+#я лох 1234, коммит

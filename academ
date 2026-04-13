@@ -1,0 +1,1373 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Synergy Learning System</title>
+    <base href="https://lms.synergy.ru/">
+    <!--[if IE]></base><![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="unsafe-url">
+
+    <meta name="robots" content="noindex">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+            <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    
+            <link href="/modules/synergy/css/base.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/modules/synergy/css/icons.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/modules/synergy/css/popup.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/modules/synergy/css/layout.css?v=2" rel="stylesheet" type="text/css" media="all">
+        <link href="/modules/synergy/css/special_elements.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/js/jquery-ui/css/datepicker-mc2/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css"
+              media="all">
+        <link href="/modules/synergy/css/common.css" rel="stylesheet" type="text/css" media="all">
+                    <link href="/skin/general/css/default.css?v=12" rel="stylesheet" type="text/css" media="all">
+                <link href="/skin/general/css/compat.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/fonts/SegoeUI/style.css" rel="stylesheet" type="text/css" media="all">
+        <link href="/skin/general/css/print.css" rel="stylesheet" type="text/css" media="print">
+        <link href="/css/bootstrap/tooltip.css" rel="stylesheet" type="text/css" media="all">
+        
+            
+    
+    <link href="/fonts/Exo/style.css"
+          rel="stylesheet" type="text/css" media="all">
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="/skin/general/css/ie9.css" media="all"><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="/skin/general/css/ie.css" media="all"><![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="/skin/general/css/ie7.css" media="all"><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://lms.synergy.ru/static/ru/skin/general/js/pie.js" type="text/javascript"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://lms.synergy.ru/static/ru/skin/general/js/selectivizr-min.js"></script><![endif]-->
+
+        <link href="https://lms.synergy.ru/static/ru/modules/synergy/css/xlsUnload.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/js/lib/jquery/jquery.min.js"></script>
+        <script src="https://lms.synergy.ru/static/ru/js/application/misc/pwh.js" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/jquery-ui/js/datepicker_init.js" type="text/javascript"></script>
+
+    <script src="/js/jquery-ui/js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+    <script src="/js/lib/jquery/jquery.json.js" type="text/javascript"></script>
+    <script src="/js/lib/jquery/jquery.form.js" type="text/javascript"></script>
+    <script src="/js/lib/jquery/jquery.mousewheel-3.0.4.js" type="text/javascript"></script>
+    <script src="/js/lib/jquery/jquery.ui.autocomplete.js" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/error_handler.js?v=4" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/swfupload/detectionFlashPlayer.js" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/custom_selector_handler.js" type="text/javascript"></script>
+
+    <script src="https://lms.synergy.ru/static/ru/js/application/user/login.js" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/controls/init_controls.js?v=3" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/lib/phpDateFormat.js" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/bootstrap/tooltip.js" type="text/javascript"></script>
+
+    <script src="https://lms.synergy.ru/static/ru/js/application/validation/validation.js?v=2" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/functions.js?v=5" type="text/javascript"></script>
+    <script src="https://lms.synergy.ru/static/ru/js/application/misc/tooltip.js" type="text/javascript"></script>
+    <script src="/js/ping.min.js?v=0.2" type="text/javascript"></script>
+
+    <script src="https://lms.synergy.ru/static/ru/skin/general/js/common.js" type="text/javascript"></script>
+
+    <script src="/js/chosen.jquery.min.js" type="text/javascript"></script>
+
+    <link href="/css/bvi.min.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/js/bvi.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery.browser = {};
+        (function () {
+            jQuery.browser.msie = false;
+            jQuery.browser.version = 0;
+            if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                jQuery.browser.msie = true;
+                jQuery.browser.version = RegExp.$1;
+            }
+        })();
+    </script>
+
+    <script type="text/javascript">
+        var rules = {"formRules": {}},
+            baseUrl = '/',
+            staticUrl = 'https://lms.synergy.ru/',
+            staticTplUrl = 'https://lms.synergy.ru/static/ru',
+            allowHttps = '1',
+            language = 'ru',
+            languageId = '1',
+            editorLanguageCode = 'ru',
+            learningLng = 'all',
+            userLogged = '1',
+            environment = 'production',
+            browser = {name: 'Chrome', version: '145'};
+    </script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $("body").on("click", ".userlog", function() {
+                var logName = $(this).data("log");
+                if (logName) {
+                    $.get("/user/log/" + logName);
+                }
+                return true;
+            });
+        });
+    </script>
+    
+	
+    <link rel="stylesheet" type="text/css" href="/js/jquery-ui/css/datepicker-mc2/jquery-ui-1.8.21.custom.css"/>
+    <script src="https://lms.synergy.ru/static/ru/modules/synergy/xlsUnloadHandler.js" type="text/javascript"></script>
+        	<script type="text/javascript">
+		<!--
+		php={"serverTime":1771842150};
+		//-->
+	</script>
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+            <meta property="og:title" content='Synergy Learning System'/>
+        <meta property="og:description" content='Synergy Learning System'/>
+        <meta property="og:url" content="https://lms.synergy.ru/"/>
+        <meta property="og:site_name" content='Synergy Learning System'>
+    
+        </head>
+<body class="section-academ academ-index is-student mc-body">
+            <div id="page" class="inner-center">
+        <div id="header" class="clearfix">
+	    <div id="logo"><a href="/">
+	    		<div class="logo-container">
+		    <div class="logo-svg" style="background-image: url('/img/logo/synergy-ru.png');"></div>
+		</div>
+	    	    </a></div><!-- #logo -->
+	        <div id="user-menu" class="drop-menu" data-handler="{action: 'toggle-drop-menu'}">
+        <ul class="no-style hidden">
+	                    <li>
+                    <a href="/messages/listing">
+                        <i class="icon icon-message"><i></i></i>
+			Личные сообщения                    </a>
+                </li>
+	                <li>
+                <a href="/user/profile/2177698">
+                    <i class="icon icon-settings"><i></i></i>
+		    Просмотр профиля                </a>
+            </li>
+        	    <li>
+	    <a href="/menuinstructions">
+	        <i class="icon icon-page"><i></i></i>
+	        Инструкция	    </a>
+	    </li>
+	                <li>
+                <a href="/user/logout">
+                    <i class="icon icon-out"><i></i></i>
+	    Выход                </a>
+            </li>
+        </ul>
+        <div id="user-profile" class="drop-menu-label" title="Новосельцев Вадим Александрович">
+            <div class="avatar">
+	<img src="https://lms.synergy.ru/img/user-30.png" alt="" width="30" height="30"  />        </div>
+            <div class="user-name">
+                Новосельцев Вадим Александрович                <i class="icon icon-down"><i></i></i>
+            </div>
+        </div>
+    </div>
+            <div id="user-lang" class="drop-menu drop-select drop-dashed small" data-handler="{action: 'toggle-drop-menu'}">
+        <ul class="no-style hidden">
+                                <li class="hidden"><a href="/user/lng/1">Ру</a></li>
+                                <li ><a href="/user/lng/2">En</a></li>
+                                <li ><a href="/user/lng/4">Uz</a></li>
+                    </ul>
+        <div class="drop-menu-label">
+            <span class="title">Ру</span>
+            <i class="icon icon-down"><i></i></i>
+        </div>
+    </div>
+    
+    <a class="header-eyes" type="button"  aria-label="Версия для слабовидящих"><span>Версия для слабовидящих</span><img class="header-eyes-img" src="/img/eye-icon.png"></a>
+    <div id="user-notice">
+	                                                                        <a href="/studylife" class="item -contact studylife" title="Студенческая жизнь">
+                        Студенческая жизнь                        <span>388</span>                    </a>
+                    					                    	        <a href="/dialog/listing" class="item -contact" title="&lt;ul&gt;&lt;li&gt;Консультация по учебному процессу, сдаче дисциплин&lt;/li&gt;&lt;li&gt;Ликвидация академических задолженностей&lt;/li&gt;&lt;li&gt;Консультация по выпуску, ВКР, практике&lt;/li&gt;&lt;li&gt;Контакты научного руководителя&lt;/li&gt;&lt;/ul&gt;">
+		<i class="icon icon-helpdesk icon-svg"><i></i></i>
+		Обратиться в деканат		<span title="Количество непрочитанных сообщений">
+		    		</span>
+	        </a>
+	                            <a href="/student/notifications" class="item" title="Уведомления">
+                        <i class="icon icon-notification icon-svg"><i></i></i>
+                        59                    </a>
+                    <a href="/messages/listing" class="item" title="Личные сообщения">
+                    <i class="icon icon-mail icon-svg"><i></i></i>
+                    0
+                </a>
+	    
+	
+        
+    </div>
+        <div id="user-greeting">
+        <span id="user-greeting-text"></span><span id="user-greeting-name">, Вадим!</span>
+        <script>
+	$(function() {
+	    generate_user_greeting();
+	});
+        </script>
+    </div>
+            </div><!-- #header -->
+
+                        <div class="wrapper" id="special_synergy_friends_welcome">
+                    <a href="https://friends.synergy.ru/my/" target="_blank" class="main__btn"><img src="/img/cta-r3.png" alt="Synergy Friends"/></a>
+                </div>
+        
+
+<div id="top-menu">
+                <div class="item">
+                    <a href="/announce                        "><i class="icon icon-tablet icon-svg"><i></i></i> Объявления                    </a>
+                </div>
+                            <div class="item">
+                    <a href="/student/up                        "><i class="icon icon-education"><i></i></i> Обучение                    </a>
+                </div>
+                            <div class="item active">
+                    <a href="/schedule/academ                        "><i class="icon icon-time icon-svg"><i></i></i> Расписание                    </a>
+                </div>
+                            <div class="item">
+                    <a href="/finance                        "><i class="icon icon-pay icon-svg"><i></i></i> Платежи                    </a>
+                </div>
+                            <div class="item">
+                    <a href="/docfiles/student                        "><i class="icon icon-page"><i></i></i> Документы                    </a>
+                </div>
+                <div class="item is-submenu">
+        <!-- Также добавляется иконка <i class="icon icon-down"><i></i></i> после названия пункта -->
+        <a href="" onclick="return false"><i class="icon icon-library"><i></i></i> Библиотека <i class="icon icon-down"><i></i></i></a>
+        <!-- И само подменю -->
+        <ul class="no-style">
+                        
+            			
+                
+                
+
+		    <li><a href="https://biblioclub.ru/index.php?page=main_ub_red&action=auth_for_org&domain=synergy.ru&user_id=2177698&login=VNovoselcev5&time=1771842150&sign=88b95ab38efc52707eace1d295665c2e&first_name=Вадим&last_name=Новосельцев&parent_name=Александрович&active_lang=ru&utf" class="userlog" data-log="biblioclub.ru" target="_blank">biblioclub.ru</a></li>
+		    		                            <li><a href="/misc/iprsmart/synergy" class="userlog" data-log="iprsmart" target="_blank">Цифровая библиотека IPR Smart</a></li>
+		    		                            <li><a href="/misc/profspo/synergy" class="userlog" data-log="profspo" target="_blank">Электронный ресурс PROFобразование</a></li>
+		    		    
+		    
+             
+		    			                    <li><a href="http://www.consultant.ru/cons/cgi/online.cgi?req=home" target="_blank">КонсультантПлюс</a></li>
+			                                </ul>
+    </div>
+</div><!-- #top-menu -->
+	<div id="breadcrumbs">
+										<a href="/"><i class="icon icon-home"><i></i></i> </a>
+													<i class="icon icon-descent"><i></i></i>Расписание													<i class="icon icon-descent"><i></i></i>Расписание аудиторных занятий						</div>
+
+
+    <div class="curators-and-accounts">
+        
+<div id="switch-accounts">
+    <div class="drop-menu drop-select small" data-handler="{action: 'toggle-drop-menu'}">
+        <ul class="no-style hidden">
+            <li><b>Студент</b></li><li>
+                                <a href="/misc/accset/student/0">
+                                  <span>
+                                    группа РPytш-ЦПД-242211-22МОо
+                                  </span>
+                                </a>
+                              </li><li>
+                                <a href="/misc/accset/student/1">
+                                  <span>
+                                    группа ДКИП-202
+                                  </span>
+                                </a>
+                              </li>        </ul>
+        <div class="drop-menu-label">
+            <span class="pre-title label label-1">Текущая роль:</span>
+            <span class="title">группа ДКИП-202</span>
+	                    <i class="icon icon-down"><i></i></i>
+                    </div>
+    </div><!-- .drop-menu -->
+    <div class="clear"><br /></div>
+</div><!-- #switch-accounts -->
+
+<style type="text/css">
+    #switch-accounts .label {
+        display: block;
+        min-width: 230px;
+    }
+    #switch-accounts .label-2 {
+        min-width: 150px;
+    }
+    #switch-accounts .teams {
+        padding-left: 12px;
+        font-size: 13px;
+    }
+    #switch-accounts .title, #switch-accounts .val {
+        color: #083167;
+    }
+    #switch-accounts .login-for-soft {
+        padding-left: 12px;
+        font-size: 12px;
+    }
+</style>
+<div id="curators" class="small">
+                        <a href="#" style="position: relative">
+            <i class="icon icon-next" style="position: absolute; right: 0; top: 0"><i></i></i>
+            </a>
+                        <ul class="curatorList">
+                                        <li class="d-flex" style="">
+                                                                                <div class="curatorPanelBlock curatorPanelBlockAvatar"><img src="/static/ru/img/user-286.png" class="curator-avatar">
+                                            </div>
+                    <div class="curatorPanelBlock"><span class="curatorTitle">Персональный Куратор 1: <i class="icon icon-question tooltipCurator" title="&lt;ul&gt;&lt;li&gt;Консультация по учебному процессу, сдаче дисциплин&lt;/li&gt;&lt;li&gt;Ликвидация академических задолженностей&lt;/li&gt;&lt;li&gt;Консультация по выпуску, ВКР, практике&lt;/li&gt;&lt;li&gt;Контакты научного руководителя&lt;/li&gt;&lt;/ul&gt;"><i></i></i></span><br/><span class="curatorName" data-id="2881311">Мрачковская Оксана Игоревна</span><br />
+                    
+                                        <div style="display: flex">
+                        <div style="padding-right: 3px"><i class="icon icon-helpdesk icon-svg"><i></i></i></div>
+                        <div>
+                            <div>+7 (495) 221-84-34, доб. 13-51</div>                        </div>
+                    </div>
+                                                                <i class="icon icon-mail icon-svg"><i></i></i>&nbsp;<a href="mailto:OMrachkovskaia@synergy.ru">OMrachkovskaia@synergy.ru</a><br />
+                    
+                                        
+                                                                        <a href="/student/ratepersonal/2881311/tutor" id="rateCurator"><b>Оценить</b></a>
+                                                                </div>
+                </li>
+                                        <li class="d-flex" style="display: none">
+                                                                                <div class="curatorPanelBlock curatorPanelBlockAvatar"><img src="/attached/base/2764587/20250522_165251.png" class="curator-avatar">
+                                            </div>
+                    <div class="curatorPanelBlock"><span class="curatorTitle">Персональный Куратор 2: <i class="icon icon-question tooltipCurator" title="&lt;ul&gt;&lt;li&gt;Консультация по учебному процессу, сдаче дисциплин&lt;/li&gt;&lt;li&gt;Ликвидация академических задолженностей&lt;/li&gt;&lt;li&gt;Консультация по выпуску, ВКР, практике&lt;/li&gt;&lt;li&gt;Контакты научного руководителя&lt;/li&gt;&lt;/ul&gt;"><i></i></i></span><br/><span class="curatorName" data-id="2881299">Абалина Ирина Александровна</span><br />
+                    
+                                        <div style="display: flex">
+                        <div style="padding-right: 3px"><i class="icon icon-helpdesk icon-svg"><i></i></i></div>
+                        <div>
+                            <div>+7 (495) 221-84-34, доб. 85-17</div>                        </div>
+                    </div>
+                                                                <i class="icon icon-mail icon-svg"><i></i></i>&nbsp;<a href="mailto:IAbalina@synergy.ru">IAbalina@synergy.ru</a><br />
+                    
+                                        
+                                                                        <a href="/student/ratepersonal/2881299/tutor" id="rateCurator"><b>Оценить</b></a>
+                                                                </div>
+                </li>
+                    </ul>
+            </div>
+
+
+<style type="text/css">
+    #curators, #curatorMain {
+        float: left;
+        width: 35%
+    }
+    #curators > a, #curatorMain > a {
+        display: block;
+        float: right;
+    }
+    .curatorList {
+        margin: 0;
+        margin-right: 3px;
+        padding-left: 8px;
+        display: inline-block;
+    }
+    #curators li, #curatorMain li {
+        list-style: none;
+    }
+    #curators .curator-avatar, #curatorMain .curator-avatar {
+        display: block;
+        float: left;
+        margin: 0 5px;
+        max-height: 60px;
+        max-width: 66px;
+    }
+    .curatorTitle {
+        font-weight: bold;
+    }
+    .curatorTitle, .curatorName {
+        padding-left: 23px;
+        max-width: 205px;
+        display: inline-block;
+    }
+    .curatorPanelBlock .icon-helpdesk i, .curatorPanelBlock .icon-mail i {
+        top: -22px;
+    }
+    #curators .smallPadding, #curatorMain .smallPadding {
+        padding-left: 3px !important;
+    }
+    .curatorPanelBlock {
+        float: left;
+    }
+    .curatorPanelBlock .tooltip ul, .curatorPanelBlock .tooltip li {
+        text-align: left;
+        margin-bottom: 0;
+        list-style: disc !important;
+    }
+    .curatorPanelBlock .tooltip ul {
+        padding: 0 0 0 25px;
+    }
+</style>
+
+<script type="text/javascript">
+    $("#curatorMain > a, #curators > a").on("click", function(e) {
+
+        var items = $(this).parent('div').find("ul").children(),
+            index = items.index(items.filter(":visible"));
+
+        items.eq(index).hide();
+        items.eq(++index >= items.size() ? 0 : index).show();
+
+        return false;
+    });
+    
+    $(document).on('click', '#rateCurator', (e) => {
+        simpleAjaxPopup(e);
+    });
+    
+    $('.curatorPanelBlock .tooltipCurator').tooltip({html:true, placement:'bottom'});
+
+    
+</script>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+
+
+	<div id="content" class="content">
+	<!-- Content was here -->
+
+
+
+
+<h1>Аудиторные занятия</h1>
+        <h5 class="info-title" data-handler="{action: 'toggle', target: '.info-panel'}">Информация о группе <i class="icon icon-info"><i></i></i></h5>
+<div class="info-panel hidden">
+    <span class="corner corner-top"><i class="icon icon-close" data-handler="{action: 'hide', target: '.info-panel'}"><i></i></i></span>
+    <div class="item">
+        Уровень обучения
+        <div class="title">СПО
+                    </div>
+    </div>
+            <div class="item">
+                            Направление обучения
+                <div class="title">Информационные системы и программирование</div>
+    </div>
+            <div class="item">
+            Форма обучения
+            <div class="title">Очная</div>
+        </div>
+        </div><!-- .info-panel --><div class="tabs clearfix">
+                                <div class="item active"><a href="/schedule/academ">Аудиторные занятия</a></div>
+                                        <div class="item"><a href="/schedule/webinar">Вебинары</a></div>
+                                        <div class="item"><a href="/schedule/consultation">Консультации</a></div>
+                                        <div class="item"><a href="/schedule/tutorplan">Тьюториалы</a></div>
+                                        <div class="item"><a href="/schedule/retake">Онлайн пересдачи</a></div>
+            </div><!-- .tabs -->
+
+
+
+
+
+
+<div style="text-align: right; margin-bottom: 2px">
+    <a style="" href="/schedule/academ?print=1"><i style="margin-top: -4px" class="icon icon-file-doc icon-list"><i></i></i>Печатная форма</a>
+</div>
+<form id="scheduleFilterForm" method="post" action="/schedule/academ">
+    <div class="filter clearfix form">
+		    <div class="row">
+					<div class="radioGroupItem wide ">
+			<input   checked="checked" type="radio" name="mySchedule" id="mySchedule"	value="1" class=""	/>
+			<label for="mySchedule" class=""> Мое расписание</label>
+		</div>
+			<div class="radioGroupItem wide ">
+			<input    type="radio" name="mySchedule" id="mySchedule2"	value="2" class=""	/>
+			<label for="mySchedule2" class=""> Расписание преподавателей</label>
+		</div>
+	
+	    </div>
+	    <div class="clear"><br /></div>
+                	<div class="hidden" id="scheduleFilter">
+            <div class="row">
+	<div class="label">Преподаватель:</div>
+	<div class="field">
+		<div class="field formFieldArea autoCompleteInput   " ><div class="formFieldBox"><div class="formField"><input 
+	type="text"
+	class="ac_input filter-schedule-text"
+			name="employee"
+	id="employee"
+	value=""
+/>
+</div></div></div>
+		<div id="employee_input" class="filter-values">
+					</div>
+	</div>
+
+</div>
+<div class="row">
+	<div class="label">Группа:</div>
+	<div class="field">
+		<div class="field formFieldArea autoCompleteInput   " ><div class="formFieldBox"><div class="formField"><input 
+	type="text"
+	class="ac_input filter-schedule-text"
+			name="group"
+	id="group"
+	value=""
+/>
+</div></div></div>
+		<div id="group_input" class="filter-values">
+					</div>
+	</div>
+</div>
+<div class="row">
+	<div class="label">Дисциплина:</div>
+	<div class="field">
+		<div class="field formFieldArea autoCompleteInput   " ><div class="formFieldBox"><div class="formField"><input 
+	type="text"
+	class="ac_input filter-schedule-text"
+			name="discipline"
+	id="discipline"
+	value=""
+/>
+</div></div></div>
+		<div id="discipline_input" class="filter-values">
+					</div>
+	</div>
+</div>
+<div class="clear"><br /></div>
+<div class="filter_schedule_checkboxes">
+<div class="left" style="float: left; width: 39%">
+	<div style="display: table" class="filter-fields row">
+		<div style="display: table-cell">
+			<div class="row">
+				<div class="field">
+					<label><input
+ checked value="1"    type="checkbox"
+    name="time_check"
+    id="time_check"
+    class=""
+    /><i class="icon icon-checkbox"><i></i></i> Время</label>
+				</div>
+				<div class="field">
+					<label><input
+ checked value="1"    type="checkbox"
+    name="discipline_check"
+    id="discipline_check"
+    class=""
+    /><i class="icon icon-checkbox"><i></i></i> Дисциплина</label>
+				</div>
+				<div class="field">
+					<label><input
+ value="1"    type="checkbox"
+    name="group_check"
+    id="group_check"
+    class=""
+    /><i class="icon icon-checkbox"><i></i></i> Группа</label>
+				</div>
+            </div>
+		</div>
+	</div>
+</div>
+<div class="right" style="float: right; width: 49%">
+	<div style="display: table" class="filter-fields row">
+		<div style="display: table-cell">
+			<div class="row">
+				<div class="field">
+					<label><input
+ checked value="1"    type="checkbox"
+    name="place_check"
+    id="place_check"
+    class=""
+    /><i class="icon icon-checkbox"><i></i></i> Место проведения</label>
+				</div>
+				<div class="field">
+					<label><input
+ checked value="1"    type="checkbox"
+    name="type_check"
+    id="type_check"
+    class=""
+    /><i class="icon icon-checkbox"><i></i></i> Вид занятия</label>
+				</div>
+				<div class="field">
+					<label><input
+ checked value="1"    type="checkbox"
+    name="teacher_check"
+    id="teacher_check"
+    class=""
+    /><i class="icon icon-checkbox"><i></i></i> Преподаватель</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<style type="text/css">
+	.row label {cursor: pointer}
+</style>        </div>
+	<div class="clear"><br /></div>
+
+	<div class="left">
+	    <div class=' controlIntervalDate'>
+	<label class=''>
+		<span class='pre'>с</span>
+		<input class='input input-date' type='text' maxlength='10'  id="dateFrom" name="dateFrom" value='23.02.2026'  >
+		<a class='icon icon-calendar mc2ControlsCalendar'  rel="dateFrom" id="calendarBtndateFrom"><i></i></a>
+	</label>
+	<label class="">
+		<span class="pre">по</span>
+		<input class="input input-date" type="text" maxlength="10"  id="dateTo" name="dateTo" value="09.03.2026"  >
+		<a class='icon icon-calendar mc2ControlsCalendar'  rel="dateTo" id="calendarBtndateTo"><i></i></a>
+	</label>
+</div>
+
+
+	</div>
+	<div class="right">
+	    <a href="javascript:void(0);"
+	id="doSrchBtn"	class="button  bt2"
+				>
+			Поиск	</a>
+
+	    <a href="/schedule/academ?doReset=1"
+	id="doResetBtn"	class="button "
+				>
+			Сброс	</a>
+
+	</div>
+	<input type="hidden" name="doSrch" value="1" />
+    </div>
+</form>
+<div class="clear"><br /></div>
+
+    
+<table class="table-list v-scrollable">
+    <thead>
+    <tr>
+                                    <th>Время</th>
+                                                <th>Курс</th>
+                                                                    <th>Место проведения</th>
+                                                <th>Вид занятия</th>
+                                                <th>Преподаватель</th>
+                        </tr>
+    </thead>
+    <tbody id="dictionaryTable">
+                                <tr><th colspan="7">24.02.26, вт</th></tr>
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                10:10                                 - 11:40                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513745/1">Основы алгоритмизации и программирования</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    828нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Полосухина П.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513745/1">Основы алгоритмизации и программирования</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    808нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Полосухина П.В.</td>                    </tr>
+
+                                            <tr><th colspan="7">25.02.26, ср</th></tr>
+                                    
+                                                                
+                    
+                    <tr>
+                                                    <td>
+                                09:30                                 - 15:00                            </td>
+                                                                            <td>
+                                                                    Пересдача Ректорского экзамена (Русский язык)<br/><span>Адрес: <i>Корпус "Нагатинский"</i></span>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    436нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    
+                                                            </td>
+                                                <td></td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513745/1">Основы алгоритмизации и программирования</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    820нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Полосухина П.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                13:50                                 - 15:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513745/1">Основы алгоритмизации и программирования</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    820нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Полосухина П.В.</td>                    </tr>
+
+                                            <tr><th colspan="7">26.02.26, чт</th></tr>
+                                    
+                                                                
+                    
+                    <tr>
+                                                    <td>
+                                09:30                                 - 15:00                            </td>
+                                                                            <td>
+                                                                    Пересдача Ректорского экзамена (Информатика)<br/><span>Адрес: <i>Корпус "Нагатинский"</i></span>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    809нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    
+                                                            </td>
+                                                <td></td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                10:10                                 - 11:40                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513750/1">Сертификация информационных систем</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    827нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Жудина В.М.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513750/1">Сертификация информационных систем</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    817нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Жудина В.М.</td>                    </tr>
+
+                                            <tr><th colspan="7">27.02.26, пт</th></tr>
+                                    
+                                                                
+                    
+                    <tr>
+                                                    <td>
+                                09:30                                 - 15:00                            </td>
+                                                                            <td>
+                                                                    Пересдача Ректорского экзамена (Математика (углубленная))<br/><span>Адрес: <i>Корпус "Нагатинский"</i></span>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    428нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    
+                                                            </td>
+                                                <td></td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513747/1">Инструментальные средства разработки программного обеспечения</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    826нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Сибирев И.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                13:50                                 - 15:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513747/1">Инструментальные средства разработки программного обеспечения</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    806нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Сибирев И.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                15:30                                 - 17:00                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513747/1">Инструментальные средства разработки программного обеспечения</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    806нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Сибирев И.В.</td>                    </tr>
+
+                                            <tr><th colspan="7">28.02.26, сб</th></tr>
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513741/1">Иностранный язык в профессиональной деятельности</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    744нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Семинар
+                                                            </td>
+                                                <td>Фомичева Д.А.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                13:50                                 - 15:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513741/1">Иностранный язык в профессиональной деятельности</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    744нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Семинар
+                                                            </td>
+                                                <td>Фомичева Д.А.</td>                    </tr>
+
+                                            <tr><th colspan="7">03.03.26, вт</th></tr>
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                10:10                                 - 11:40                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513744/1">Архитектура аппаратных средств</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    826нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Артемова Т.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513744/1">Архитектура аппаратных средств</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    806нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Артемова Т.В.</td>                    </tr>
+
+                                            <tr><th colspan="7">04.03.26, ср</th></tr>
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513740/1">Элементы высшей математики</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    709нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Судариков Г.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                13:50                                 - 15:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513740/1">Элементы высшей математики</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    738нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Семинар
+                                                            </td>
+                                                <td>Судариков Г.В.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                15:30                                 - 17:00                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513740/1">Элементы высшей математики</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    738нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Семинар
+                                                            </td>
+                                                <td>Судариков Г.В.</td>                    </tr>
+
+                                            <tr><th colspan="7">05.03.26, чт</th></tr>
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                10:10                                 - 11:40                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513742/1">Теория вероятностей и математическая статистика</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    714нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Шевченко К.К.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513742/1">Теория вероятностей и математическая статистика</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    744нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Семинар
+                                                            </td>
+                                                <td>Шевченко К.К.</td>                    </tr>
+
+                                            <tr><th colspan="7">06.03.26, пт</th></tr>
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                11:50                                 - 13:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513746/1">Технология разработки программного обеспечения</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    828нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лекция
+                                                            </td>
+                                                <td>Солдатова О.Б.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                13:50                                 - 15:20                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513746/1">Технология разработки программного обеспечения</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    819нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Солдатова О.Б.</td>                    </tr>
+
+                                    
+                                                                                                                    
+                    
+                    <tr>
+                                                    <td>
+                                15:30                                 - 17:00                            </td>
+                                                                            <td>
+                                                                    <a href="/lntools/versiongroupassign/contents/student/25513746/1">Технология разработки программного обеспечения</a>
+                                                            </td>
+                                                
+                                                    <td>
+                                                                    819нг
+                                                                                                    НГ   
+                                                            </td>
+                        
+                                                    <td>
+                                                                    Лабораторный практикум
+                                                            </td>
+                                                <td>Солдатова О.Б.</td>                    </tr>
+
+                                    </tbody>
+</table>
+
+<style type="text/css">
+    .table-list tr td:first-child {
+        min-width: 100px;
+    }
+
+    .subgroup {
+        color: #808080;
+        font-size: 13px;
+    }
+</style><span class="unloadXls"><span class="xlsArrow">&#8682;</span><span class="textUpload">Выгрузить</span></span>
+<span class="loadComplite"></span>
+
+<div class="clear"><br /></div>
+
+
+                <h3>Корпуса Университета:</h3>
+        <table class="table-list table-corpus table-options v-scrollable">
+            <tbody>
+            <tr>
+                    <td>
+                                                                <p><strong>&nbsp;Я    </strong> &mdash; 5-я улица Ямского поля, д.25, 25а (м.«Белорусская»</p>
+                                                                <p><strong>&nbsp;Н    </strong> &mdash; ул. Никитинская, д.4а (м.«Измайловская»)</p>
+                                                                <p><strong>&nbsp;С    </strong> &mdash; ул. Смольная, д.10 (м.«Водный стадион»)</p>
+                                                                <p><strong>&nbsp;Щ    </strong> &mdash; г. Москва, г.о. Щербинка, ул. Пушкинская, д.3В</p>
+                                                                <p><strong>&nbsp;О    </strong> &mdash; онлайн</p>
+                                                                <p><strong>&nbsp;ХКБ11</strong> &mdash; г.Химки, Куркинское ш., д.11</p>
+                                                </td>
+                    <td>
+                                                                <p><strong>&nbsp;В    </strong> &mdash; Варшавское шоссе, д.79, к.2 (м.«Варшавская»)</p>
+                                                                <p><strong>&nbsp;ПР   </strong> &mdash; ул. Партизанская, д.27 (м.«Молодежная»)</p>
+                                                                <p><strong>&nbsp;Лм   </strong> &mdash; Ленинградский пр-кт, д. 80, корпус 45-46 (м.«Сокол</p>
+                                                                <p><strong>&nbsp;КБ   </strong> &mdash; г.Красногорск, ул.Карбышева, д.4</p>
+                                                                <p><strong>&nbsp;СЦЗ  </strong> &mdash; г.Москва, 2-я Кабельная ул., д.2, стр.25</p>
+                                                                <p><strong>&nbsp;ХКБ14</strong> &mdash; г.Химки, Ленинский пр-т, д.14</p>
+                                                </td>
+            </tr>
+                                <tr>
+                            <td>
+                                                                                <p><strong>&nbsp;М8   </strong> &mdash; ул. Мясницкая, д.8/2, стр.1 (м.«Лубянка»)</p>
+                                                                                <p><strong>&nbsp;П    </strong> &mdash; ул. Планетная, д.36 (м.«Аэропорт»)</p>
+                                                                                <p><strong>&nbsp;Л    </strong> &mdash; Ленинградский пр-кт, д. 80, корпуса Е, Ж, Г. (м.«С</p>
+                                                                                <p><strong>&nbsp;КСМ  </strong> &mdash; г.Красногорск, Ильинское ш., д.4</p>
+                                                                                <p><strong>&nbsp;СК   </strong> &mdash; Инновационный центр Сколково</p>
+                                                                                <p><strong>&nbsp;ХКБ31</strong> &mdash; г.Химки, мкр.Сходня, ул.Мичурина, д.31а</p>
+                                                                </td>
+
+                            <td>
+                                                                                <p><strong>&nbsp;НГ   </strong> &mdash; Хлебозаводский проезд, д.7, стр.10 (м.«Нагатинская</p>
+                                                                                <p><strong>&nbsp;И    </strong> &mdash; Измайловский вал, 2 (м.«Семеновская»)</p>
+                                                                                <p><strong>&nbsp;У    </strong> &mdash; ул. Усиевича, д.20, к.1 (м.«Сокол»)</p>
+                                                                                <p><strong>&nbsp;КЦ   </strong> &mdash; ул. Партизанская, д. 23</p>
+                                                                                <p><strong>&nbsp;Л-к.1</strong> &mdash; Ленинградский проспект, 80 к.1 (м.«Сокол»)</p>
+                                                                </td>
+                    </tr>
+                        </tbody>
+    </table>
+
+
+<script type="text/javascript">
+
+    xlsUnLoadHandler({
+        clickButton:    'unloadXls',// Start click
+        finalHrefClass: 'xls-a',    // Class href
+        separator: true,            // разделитель |
+        link: "/schedule/academ/listing_academ_xls"
+    });
+
+    var filterLoaded = ($('#scheduleFilter').html() != '');
+
+    $(document).on("change", '#dateFrom', function () {
+        bindAcFields();
+    });
+
+    $(document).on("change", '#dateTo', function () {
+        bindAcFields();
+    });
+
+    var tfilters = {
+        'employee': { url: baseUrl + "autocomplete/akada/scheduleEmployee"},
+        'group': { url: baseUrl + "autocomplete/akada/scheduleGroup"},
+        'discipline': { url: baseUrl + "autocomplete/akada/scheduleDiscipline"}
+    };
+
+    function addFilterItem(event, id, label) {
+        var filterName = $(event.target).attr('id');
+
+        if(!$('#'+filterName+'_input a[rel='+id+']').length) {
+            $('#'+filterName+'_input').append('<span>'+label+' <input type="hidden" name="'+filterName+'[]" value="'+id+'" /> <a class="cancelIco ico" rel="'+id+'" href="javascript:void(0);" title="Удалить">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>');
+        }
+        $(event.target).val('');
+    }
+
+    function bindAcFields() {
+        for(var fidx in tfilters) {
+            $('#'+fidx).blur().mcAutocompleteInit(
+                    tfilters[fidx]['url'],
+                    {},
+                    {
+                        select: function(event, ui) {
+                            addFilterItem(event, ui.item.data['ID'], ui.item.value);
+                        },
+                        close: function(e) {
+                            $('#'+e.target.id).val('');
+                        }
+                    }
+            );
+        }
+    }
+
+    if(filterLoaded) {
+        bindAcFields();
+    }
+
+    $('.filter-values span > a').on('click', function() {
+        $(this).parent().remove();
+    });
+
+    $('#scheduleFilterForm').submit(function() {
+        if(($('input[name="employee[]"]').val() === undefined && $('input[name="group[]"]').val() === undefined && $('input[name="discipline[]"]').val() === undefined) && $('input[name=mySchedule]:checked').val() == 2) {
+            $('input[name="employee"]').focus();
+            return false;
+        }
+    });
+
+    $('input[name=mySchedule]').click(function () {
+        var filterBlock = $('#scheduleFilter');
+        if ($(this).val() == '2' && filterBlock.hasClass('hidden')) {
+            filterBlock.removeClass('hidden');
+            $('.filter_schedule_checkboxes input').prop('checked', true);
+        } else {
+            filterBlock.addClass('hidden');
+        }
+    });
+
+</script>
+
+<style>
+    .filter-schedule-text { width: 300px; }
+    .filter-values { margin-top: 7px; }
+    .filter-values .ico { margin-right: 0 !important; }
+    .table-list {margin-bottom: 0px;}
+    .filter-values span { border: 1px solid #aaa; background-color: #eee; padding-left: 6px; line-height: 16px; margin: 0 5px 5px 0; padding-top: 1px; display: inline-block; font-size: 12px; }
+
+    .round-box-alert {
+        background: none repeat scroll 0 0 #f5ebcb;
+        border-color: #ffcf3b;
+    }
+    .round-box {
+        border: 2px solid #ffcf3b;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+</style>
+
+	</div><!-- #content -->
+    </div><!-- #page -->
+
+    <div id="footer">
+	<div class="inner-center">
+    <div id="bottom-menu">
+                        <div class="item">
+                    <a href="/announce">Объявления</a>
+                </div>
+                                <div class="item">
+                    <a href="/student/up">Обучение</a>
+                </div>
+                                <div class="item active">
+                    <a href="/schedule/academ">Расписание</a>
+                </div>
+                                <div class="item">
+                    <a href="/finance">Платежи</a>
+                </div>
+                                <div class="item">
+                    <a href="/docfiles/student">Документы</a>
+                </div>
+                                <div class="item">
+                    <a href="http://www.biblioclub.ru/" target="_blank">Библиотека</a>
+                </div>
+                    </div><!-- #top-menu -->
+            <div class="footer-note"></div>
+        <br/>
+        
+            <div id="footer-tab">
+                <div id="footer-row">
+
+                                            <div id="contacts">
+                                                        <div class="org">
+                                <b>                                        Synergy Learning System                                </b>
+                                                                    <span
+                                            class="vr">|</span> Тел.:8-800-10-000-11                            </div>
+                                                            <div class="apps">
+                                    <a target="_blank" href="https://lms.synergy.ru/link/r/1" rel="noindex nofollow">
+                                        Приложение для iPhone                                    </a>
+                                    <span class="vr">|</span>
+                                    <a target="_blank"
+                                       href="https://lms.synergy.ru/link/r/2" rel="noindex nofollow">
+                                        для Android                                    </a>
+                                </div>
+                                                                                                            </div><!-- #contacts -->
+                    
+
+                    <div id="copyright">© 
+                    Synergy Learning System                     2026
+                                                    <span class="vr">|</span>
+                                                            <a href="/dialog/messages/0/0/curator">Обратная связь</a>
+                                                    
+                        
+                    </div><!-- #copyright -->
+
+                </div>
+            </div>
+
+	</div><!-- .inner-center -->
+            </div><!-- #footer -->
+    
+    <div class="popupContainer" id="popupContainer">
+    	        </div>
+
+    
+            <script>
+            new isvek.Bvi({
+              target: ".header-eyes",
+              speech: false,
+              theme: "white"
+            });
+        </script>
+
+</body>
+</html>
+
+<style type="text/css">
+    .banner img {
+        height: auto;
+        width: 100%;
+    }
+</style>
